@@ -7,7 +7,7 @@ import { useState } from 'react';
 function App() {
 
   // const [page] = useState([
-  //   'about', 'projects', 'contact', 'resume'
+  //   'puppy', 'references', 'contact', 'commands'
   // ])
 
   // const [currentPage, setCurrentPage] = useState('Home')
@@ -20,11 +20,11 @@ function App() {
     //     setCurrentPage={setCurrentPage}
     //   />
       
-    //   <About/>
+    //   <Puppy/>
 
-    //   <Projects/>
+    //   <References/>
 
-    //   <Resume/>
+    //   <Commands/>
 
     //   <Contact/>
 
