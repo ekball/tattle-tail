@@ -3,7 +3,6 @@ import MovieMatchPhoto from "../../assets/images/movie-match-screenshot.png";
 import MediaGemsPhoto from "../../assets/images/media-gems-screenshot.png";
 import WeatherDashboardPhoto from "../../assets/images/weather-dashboard-screenshot.png";
 import READMEGeneratorPhoto from "../../assets/images/README-generator-screenshot.png";
-import NotetakerPhoto from "../../assets/images/notetaker-screenshot.png";
 import PasswordGeneratorPhoto from "../../assets/images/password-generator-screenshot.png";
 import PokeBuffPhoto from "../../assets/images/pokebuff-screenshot.png";
 
