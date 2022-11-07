@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 
 
-function Puppy() {
+function Puppy({ currentPage, handlePageChange }) {
   return (
 
     <section >
@@ -12,22 +12,25 @@ function Puppy() {
 
       <div>
 
-      <img/>
-
       <ul>
 
         <li>
 
-          <a
-          >
-            <Button>Potty Training</Button>
+          <a href="#pottytrain"
+            onClick={() => handlePageChange('PottyTrain')}
+            // when the about button is clicked, re-render the page with the info from the about component
+            // if the current page is the about page, set the value of nav-link to active, otherwise, leave false
+            className={currentPage === 'PottyTrain' ? 'nav-link active' : 'nav-link'}>
+
+            Potty Training
+          
           </a>
 
         </li>
 
         <li>
 
-          <a>
+          <a href="#biting">
             <Button>Biting and Teething</Button>
           </a>
 
@@ -35,7 +38,7 @@ function Puppy() {
 
         <li>
 
-          <a>
+          <a href="#socialize">
           <Button>Socializing</Button>
           </a>
 

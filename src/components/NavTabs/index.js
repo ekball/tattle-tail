@@ -1,48 +1,48 @@
 import React from 'react';
 
 import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
+// import ClickAwayListener from '@mui/material/ClickAwayListener';
+// import Grow from '@mui/material/Grow';
+// import Paper from '@mui/material/Paper';
+// import Popper from '@mui/material/Popper';
+// import MenuItem from '@mui/material/MenuItem';
+// import MenuList from '@mui/material/MenuList';
 
 function NavTabs({ currentPage, handlePageChange }) {
   
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
+  // const [open, setOpen] = React.useState(false);
+  // const anchorRef = React.useRef(null);
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+  // const handleToggle = () => {
+  //   setOpen((prevOpen) => !prevOpen);
+  // };
 
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
+  // const handleClose = (event) => {
+  //   if (anchorRef.current && anchorRef.current.contains(event.target)) {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
+  //   setOpen(false);
+  // };
 
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === 'Escape') {
-      setOpen(false);
-    }
-  }
+  // function handleListKeyDown(event) {
+  //   if (event.key === 'Tab') {
+  //     event.preventDefault();
+  //     setOpen(false);
+  //   } else if (event.key === 'Escape') {
+  //     setOpen(false);
+  //   }
+  // }
 
   // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
+  // const prevOpen = React.useRef(open);
+  // React.useEffect(() => {
+  //   if (prevOpen.current === true && open === false) {
+  //     anchorRef.current.focus();
+  //   }
 
-    prevOpen.current = open;
-  }, [open]);
+  //   prevOpen.current = open;
+  // }, [open]);
 
   return (
 
@@ -50,7 +50,7 @@ function NavTabs({ currentPage, handlePageChange }) {
 
     <ul className="nav nav-tabs flex justify-evenly">
 
-      <li>
+      {/* <li>
           <Button
             ref={anchorRef}
             id="composition-button"
@@ -137,7 +137,7 @@ function NavTabs({ currentPage, handlePageChange }) {
             </Grow>
           )}
         </Popper>
-      </li>
+      </li> */}
 
       {/* <li className='hover:text-orange-400 text-xl'>
         <Button
@@ -226,6 +226,34 @@ function NavTabs({ currentPage, handlePageChange }) {
           )}
         </Popper>
       </li> */}
+
+      {/*  navigation tab to the references section */}
+      <li className='hover:text-orange-400 text-xl'>
+        <a
+          href="#puppy"
+          onClick={() => handlePageChange('Puppy')}
+          // when the references button is clicked, re-render the page with the info from the references component
+          // if the current page is the references page, set the value of nav-link to active, otherwise, leave false
+          className={currentPage === 'Puppy' ? 'nav-link active' : 'nav-link'}
+        >
+          Puppy
+        </a>
+      </li>
+
+      {/*  navigation tab to the references section */}
+      <li className='hover:text-orange-400 text-xl'>
+        <a
+          href="#commands"
+          onClick={() => handlePageChange('Commands')}
+          // when the references button is clicked, re-render the page with the info from the references component
+          // if the current page is the references page, set the value of nav-link to active, otherwise, leave false
+          className={currentPage === 'Commands' ? 'nav-link active' : 'nav-link'}
+        >
+          Commands
+        </a>
+      </li>
+
+
 
       {/*  navigation tab to the references section */}
       <li className='hover:text-orange-400 text-xl'>
